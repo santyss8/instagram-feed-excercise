@@ -20,10 +20,10 @@
                 <h1>My First Photo</h1>
                 <p>12/14</p>
             </div>
-            <img src="img/perritos.jpg" alt="perritos" class="feed-photo">
+            <img src="/img/perritos.jpg" alt="perritos" class="feed-photo">
             <div class="text-photo">
                 <p>Momentos de pura felicidad y compañerismo peludo. 🐾❤️ #DogLover #BestFriends</p>
-                <ion-icon name="heart-outline" class="like-icon invisible visible"></ion-icon>
+                <ion-icon name="heart-outline" class="like-icon"></ion-icon>
             </div>
         </div>
         <div class="feed-box">
@@ -34,7 +34,7 @@
             <img src="img/mercedes.jpg" alt="mercedes" class="feed-photo">
             <div class="text-photo">
                 <p>En ruta hacia nuevas experiencias y destinos por descubrir. 🚗💨 #Wanderlust #OnTheRoadAgain</p>
-                <ion-icon name="heart-outline" class="like-icon invisible visible"></ion-icon>
+                <ion-icon name="heart-outline" class="like-icon"></ion-icon>
             </div>
 
         </div>
@@ -46,7 +46,7 @@
             <img src="img/joysticks.jpg" alt="joysticks" class="feed-photo">
             <div class="text-photo">
                 <p>¡Hora de sumergirse en nuevas aventuras virtuales! 🎮 ¿Quién más ama los videojuegos tanto como yo? #GamerLife</p>
-                <ion-icon name="heart-outline" class="like-icon invisible joystick visible"></ion-icon>
+                <ion-icon name="heart-outline" class="like-icon"></ion-icon>
                 
             </div>
 
@@ -59,10 +59,27 @@
             <img src="img/tenis.jpg" alt="tenis" class="feed-photo">
             <div class="text-photo">
                 <p>Listo para conquistar la cancha con estos nuevos compañeros de juego. 🎾 #PassionForSports</p>
-                <ion-icon name="heart-outline" class="like-icon invisible visible"></ion-icon>
+                <ion-icon name="heart-outline" class="like-icon"></ion-icon>
             </div>
         </div>
     </section>
+    
+    <script>
+        const likeIcons = document.querySelectorAll('.like-icon');
+    
+        likeIcons.forEach((icon) => {
+            icon.addEventListener('click', () => {
+                if (icon.name === 'heart-outline') {
+                    icon.name = 'heart';
+                    icon.classList.toggle('liked')
+                } else {
+                    icon.name = 'heart-outline';
+                    icon.classList.toggle('liked')
+                }
+            });
+        });
+    </script>
+    
     
 
 
