@@ -55,22 +55,24 @@ header h1 {
     font-size: 14px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .text-photo p {
-    margin-right: 50px;
+    width: 70%;
 }
+
+
 
 .like-icon {
     font-size: 30px;
     cursor: pointer;
-    transition: color 0.3s;
-    
 }
 
-.joystick {
-    font-size: 35px;
+.liked {
+   color: red;
 }
+
+
 
 
